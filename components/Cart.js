@@ -43,9 +43,9 @@ const Cart = ({ open, cartItems, setCartItems }) => {
       );
     } else {
       return (
-        <span className={styles.empty}>
+        <div className={styles.empty}>
           <p>Your cart is empty</p>
-        </span>
+        </div>
       );
     }
   };
