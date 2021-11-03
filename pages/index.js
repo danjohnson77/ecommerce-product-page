@@ -42,6 +42,7 @@ export default function Home({ product }) {
           setOpen={setLightboxOpen}
         />
         <section className={styles.slideshow}>
+          <h2>Product Image Carousel</h2>
           <Slidebox
             images={images}
             overlayOpen={overlayOpen}
@@ -51,8 +52,8 @@ export default function Home({ product }) {
           />
         </section>
         <section className={styles.info}>
-          <h1>{company}</h1>
-          <h2>{name}</h2>
+          <h2>{company}</h2>
+          <h3>{name}</h3>
           <p>{description}</p>
 
           <span className={styles.price}>{discount ? `$${fullPrice * discount}` : `$${fullPrice}`}.00</span>

@@ -13,7 +13,7 @@ const Lightbox = ({ images, open, setOpen, overlayOpen, setOverlayOpen }) => {
             setOverlayOpen(!overlayOpen);
           }}
         >
-          <img src="/images/icon-close.svg" />
+          <img src="/images/icon-close.svg" alt="Close Lightbox" />
         </button>
         <Slidebox images={images} lightbox={true} lightboxStyles={styles} />
       </div>

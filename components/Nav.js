@@ -11,8 +11,8 @@ const Nav = ({ overlayOpen, setOverlayOpen, cartItems, setCartItems }) => {
         <div
           className={styles.overlay}
           style={{
-            height: overlayOpen && "100vh",
-            opacity: overlayOpen && "0.9",
+            height: overlayOpen ? "100vh" : "0vh",
+            opacity: overlayOpen ? "0.9" : "0",
             transition: "height 0ms 0ms, opacity 600ms 0ms",
           }}
         ></div>
@@ -36,11 +36,11 @@ const Nav = ({ overlayOpen, setOverlayOpen, cartItems, setCartItems }) => {
           }}
           className={styles.cartIcon}
         >
-          <div className={styles.quantityWrap}>
-            <div className={styles.quantity} style={{ display: cartItems.length > 0 ? "block" : "none" }}>
+          <span className={styles.quantityWrap}>
+            <span className={styles.quantity} style={{ display: cartItems.length > 0 ? "inline" : "none" }}>
               {cartItems[0]?.quantity}
-            </div>
-          </div>
+            </span>
+          </span>
           <img src="../images/icon-cart.svg" alt="Shopping Cart Icon" aria-label="Shopping Cart Icon" />
           <Cart open={cartOpen} cartItems={cartItems} setCartItems={setCartItems} />
         </span>

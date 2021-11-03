@@ -47,9 +47,9 @@
           cursor: pointer;
           position: relative;
           overflow: hidden;
+          border-radius: $radius;
           &.active {
-            border: 3px solid $primaryOrange;
-            border-radius: $radius;
+            border: 2px solid $primaryOrange;
           }
           &::after {
             @include white-overlay;

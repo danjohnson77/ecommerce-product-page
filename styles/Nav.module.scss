@@ -34,15 +34,15 @@
     .quantityWrap {
       position: relative;
       .quantity {
-        position: absolute;
         background-color: $primaryOrange;
         color: $white;
         font-weight: 400;
         font-size: 0.6rem;
         border-radius: 40%;
         padding: 0.07rem 0.4rem;
-        top: -5px;
-        left: 60%;
+        position: absolute;
+        top: -10px;
+        left: 10px;
       }
     }
   }
