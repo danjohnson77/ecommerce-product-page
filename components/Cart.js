@@ -14,14 +14,14 @@ const Cart = ({ open, cartItems, setCartItems }) => {
       const list = cartItems.map((item, i) => {
         const { price, quantity, id, name } = item;
         return (
-          <div className={styles.item} key={i}>
+          <span className={styles.item} key={i}>
             <img src="/images/image-product-1-thumbnail.jpg" alt="" />
-            <div className={styles.info}>
+            <span className={styles.info}>
               <p className={styles.name}>{name}</p>
               <p className={styles.price}>
                 {price} x {quantity} <span>{`$${price * quantity}.00`}</span>
               </p>
-            </div>
+            </span>
             <span
               onClick={() => {
                 handleDelete(id);
@@ -29,7 +29,7 @@ const Cart = ({ open, cartItems, setCartItems }) => {
             >
               <img src="/images/icon-delete.svg" alt="" />
             </span>
-          </div>
+          </span>
         );
       });
 
@@ -53,7 +53,7 @@ const Cart = ({ open, cartItems, setCartItems }) => {
   return (
     <span className={styles.cart} style={{ display: open ? "flex" : "none" }}>
       <span className={styles.header}>
-        <h2>Cart</h2>
+        <p>Cart</p>
       </span>
       <span className={styles.main}>{renderItems()}</span>
     </span>
