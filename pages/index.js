@@ -87,8 +87,6 @@ export default function Home({ product }) {
           </button>
         </section>
       </main>
-
-      <footer className={styles.footer}></footer>
     </div>
   );
 }

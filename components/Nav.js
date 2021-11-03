@@ -48,7 +48,7 @@ const Nav = ({ overlayOpen, setOverlayOpen, cartItems, setCartItems }) => {
           <img src="../images/image-avatar.png" alt="User Avatar" aria-label="User Avatar" />
         </span>
 
-        <nav style={{ transform: open && "none" }}>
+        <nav style={{ transform: open ? "none" : "translateX(-66vw)" }}>
           <ul>
             <li>
               <a>Collections</a>

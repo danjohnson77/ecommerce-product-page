@@ -51,12 +51,12 @@ const Cart = ({ open, cartItems, setCartItems }) => {
   };
 
   return (
-    <div className={styles.cart} style={{ display: open ? "flex" : "none" }}>
-      <div className={styles.header}>
-        <h1>Cart</h1>
-      </div>
-      <div className={styles.main}>{renderItems()}</div>
-    </div>
+    <span className={styles.cart} style={{ display: open ? "flex" : "none" }}>
+      <span className={styles.header}>
+        <h2>Cart</h2>
+      </span>
+      <span className={styles.main}>{renderItems()}</span>
+    </span>
   );
 };
 
