@@ -1,3 +1,6 @@
+$breakpoint: 720px;
+$max-width: 1024px;
+
 $primaryOrange: hsl(26, 100%, 55%);
 $paleOrange: hsl(26, 100%, 94%);
 
@@ -7,3 +10,11 @@ $grayBlue: hsl(220, 14%, 75%);
 $lightGrayBlue: hsl(223, 64%, 98%);
 $white: hsl(0, 0%, 100%);
 $black: hsl(0, 0%, 0%);
+
+$avatarSize: 20px;
+
+$openSpeed: 0.5s;
+
+$radius: 10px;
+
+$border: 2px solid $primaryOrange;

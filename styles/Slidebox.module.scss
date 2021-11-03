@@ -1,0 +1,73 @@
+@import "./variables.scss", "./mixins.scss";
+
+.slidebox {
+  position: relative;
+  z-index: 0;
+  height: 40vh;
+  .images {
+    display: flex;
+    cursor: pointer;
+    position: relative;
+
+    .currentImage {
+      width: 100%;
+    }
+  }
+
+  .buttons {
+    @include slidebox-buttons;
+  }
+
+  .thumbnails {
+    display: none;
+  }
+}
+
+@media screen and (min-width: $breakpoint) {
+  .slidebox {
+    height: auto;
+    padding: 0 4rem;
+    img {
+      border-radius: $radius;
+    }
+
+    .buttons {
+      display: none;
+    }
+    .thumbnails {
+      display: block;
+      max-width: 100%;
+      ul {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        padding-top: 2rem;
+
+        li {
+          cursor: pointer;
+          position: relative;
+          overflow: hidden;
+          &.active {
+            border: 3px solid $primaryOrange;
+            border-radius: $radius;
+          }
+          &::after {
+            @include white-overlay;
+          }
+
+          &:hover::after {
+            opacity: 0.5;
+          }
+
+          &.active::after {
+            opacity: 0.5;
+          }
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

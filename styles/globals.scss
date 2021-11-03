@@ -10,4 +10,11 @@
   background: transparent;
   box-sizing: border-box;
   line-height: 1.2;
+  font-family: $primaryFont;
+  list-style: none;
+}
+
+body {
+  max-width: $max-width;
+  margin: 0 auto;
 }

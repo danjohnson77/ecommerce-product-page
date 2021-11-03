@@ -1,0 +1,155 @@
+@import "./variables.scss", "./fonts.scss", "./mixins.scss";
+
+.container {
+  position: relative;
+  width: 100vw;
+  max-width: $max-width;
+  font-weight: 700;
+}
+
+.main {
+  position: relative;
+}
+
+.info {
+  display: grid;
+  padding: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  h1 {
+    color: $primaryOrange;
+    font-size: 0.8rem;
+    grid-column: 1 / 5;
+    grid-row: 1;
+    letter-spacing: 0.1rem;
+  }
+  h2 {
+    grid-column: 1 / 5;
+    grid-row: 2;
+    font-size: 1.7rem;
+  }
+  p {
+    grid-column: 1 / 5;
+    grid-row: 3;
+    color: $darkGrayBlue;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  .price {
+    grid-row: 4;
+    font-size: 1.7rem;
+  }
+  .discount {
+    grid-row: 4;
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    span {
+      background-color: $paleOrange;
+      color: $primaryOrange;
+      padding: 0.25rem 0.5rem;
+      border-radius: $radius;
+    }
+  }
+
+  .fullPrice {
+    grid-row: 4;
+    grid-column: 4;
+    color: $grayBlue;
+    text-decoration: line-through;
+  }
+
+  .quantity,
+  .add {
+    display: flex;
+    border-radius: $radius;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .quantity {
+    grid-row: 5;
+    grid-column: 1 / 5;
+    background-color: $lightGrayBlue;
+    justify-content: space-between;
+    padding: 1rem;
+    div {
+      cursor: pointer;
+    }
+  }
+
+  .add {
+    grid-row: 6;
+    grid-column: 1 / 5;
+    background-color: $primaryOrange;
+    color: $white;
+    justify-content: center;
+    width: 100%;
+    cursor: pointer;
+    span {
+      margin-left: 1rem;
+    }
+    img {
+      fill: $white;
+    }
+    box-shadow: 0px 30px 20px 5px $paleOrange;
+    position: relative;
+    &::after {
+      @include white-overlay;
+    }
+    &:hover::after {
+      opacity: 0.5;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    min-height: 100vh;
+
+    .info {
+      grid-template-columns: repeat(6, 1fr);
+      h2 {
+        font-size: 2.5rem;
+      }
+
+      h1,
+      h2,
+      p {
+        grid-column: 1 / 7;
+      }
+
+      p {
+        padding: 1rem 0;
+      }
+
+      .price {
+        grid-column: 1;
+      }
+
+      .fullPrice {
+        grid-column: 1;
+        grid-row: 5;
+        margin-bottom: 1rem;
+      }
+
+      .add {
+        grid-row: 6;
+        grid-column: 3 / 7;
+      }
+
+      .quantity {
+        grid-row: 6;
+        grid-column: 1 / 3;
+        padding: 0 1rem;
+      }
+    }
+  }
+}
