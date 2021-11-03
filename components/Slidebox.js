@@ -68,7 +68,7 @@ const Slidebox = ({
           }
         }}
       >
-        <img src={images[currentImage]} className={styles.currentImage} />
+        <img src={images[currentImage]} className={styles.currentImage} alt="Picture of Product" />
         <div className={`${lightbox ? lightboxStyles.buttons : styles.buttons}`}>
           <span
             onClick={() => {

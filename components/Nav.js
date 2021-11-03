@@ -19,11 +19,13 @@ const Nav = ({ overlayOpen, setOverlayOpen, cartItems, setCartItems }) => {
         <div className={styles.menuOpen}>
           <input
             type="checkbox"
+            name="open"
             className={styles.toggle}
             onClick={() => {
               setOpen(!open);
               setOverlayOpen(!overlayOpen);
             }}
+            aria-label="Open Navigation Menu"
           />
           <img src={`../images/icon-${open ? "close" : "menu"}.svg`} alt="Menu Icon" aria-label="Menu Icon" />
         </div>
