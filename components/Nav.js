@@ -30,20 +30,20 @@ const Nav = ({ overlayOpen, setOverlayOpen, cartItems, setCartItems }) => {
           <img src={`../images/icon-${open ? "close" : "menu"}.svg`} alt="Menu Icon" aria-label="Menu Icon" />
         </div>
         <img src="../images/logo.svg" alt="Sneakers Logo" aria-label="Sneakers Logo" />
-        <span
+        <div
           onClick={() => {
             setCartOpen(!cartOpen);
           }}
           className={styles.cartIcon}
         >
-          <span className={styles.quantityWrap}>
+          <div className={styles.quantityWrap}>
             <span className={styles.quantity} style={{ display: cartItems.length > 0 ? "inline" : "none" }}>
               {cartItems[0]?.quantity}
             </span>
-          </span>
+          </div>
           <img src="../images/icon-cart.svg" alt="Shopping Cart Icon" aria-label="Shopping Cart Icon" />
           <Cart open={cartOpen} cartItems={cartItems} setCartItems={setCartItems} />
-        </span>
+        </div>
         <span className={styles.avatar}>
           <img src="../images/image-avatar.png" alt="User Avatar" aria-label="User Avatar" />
         </span>
