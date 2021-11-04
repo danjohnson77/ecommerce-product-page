@@ -93,11 +93,12 @@
 
 @media screen and (min-width: $breakpoint) {
   .header {
+    position: relative;
     grid-template-columns: auto 1fr auto auto;
     gap: 3rem;
     grid-template-rows: 1fr;
     border-bottom: 2px solid $lightGrayBlue;
-    padding: 0;
+    padding: 1rem;
     max-width: $max-width;
     .cartIcon {
       grid-column: 3;
@@ -169,7 +170,7 @@
 }
 
 @media screen and (min-width: $breakpoint) and (max-width: $max-width) {
-  .header {
-    padding: 0 2rem;
-  }
+  // .header {
+  //   padding: 0 2rem;
+  // }
 }
