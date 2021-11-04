@@ -43,6 +43,7 @@ export default function Home({ product }) {
           setOpen={setLightboxOpen}
         />
         <section className={styles.slideshow}>
+          <h2 className={styles.hidden}>{name} Information</h2>
           <Slidebox
             images={images}
             overlayOpen={overlayOpen}
