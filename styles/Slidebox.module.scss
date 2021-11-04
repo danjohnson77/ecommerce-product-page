@@ -8,7 +8,8 @@
     display: flex;
     cursor: pointer;
     position: relative;
-
+    height: 100%;
+    width: 100%;
     .currentImage {
       width: 100%;
     }
@@ -27,6 +28,10 @@
   .slidebox {
     height: auto;
     padding: 0 4rem;
+    .images {
+      height: auto;
+    }
+
     img {
       border-radius: $radius;
     }
