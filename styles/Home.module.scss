@@ -10,7 +10,8 @@
 .main {
   position: relative;
 
-  h1.hidden {
+  h1.hidden,
+  h2.hidden {
     position: absolute;
     top: -9999px;
     left: -9999px;
