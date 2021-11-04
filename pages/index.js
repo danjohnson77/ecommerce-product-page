@@ -34,6 +34,7 @@ export default function Home({ product }) {
         setCartItems={setCartItems}
       />
       <main className={styles.main}>
+        <h1 className={styles.hidden}>{name}</h1>
         <Lightbox
           images={images}
           overlayOpen={overlayOpen}
@@ -42,7 +43,6 @@ export default function Home({ product }) {
           setOpen={setLightboxOpen}
         />
         <section className={styles.slideshow}>
-          <h2>Product Image Carousel</h2>
           <Slidebox
             images={images}
             overlayOpen={overlayOpen}

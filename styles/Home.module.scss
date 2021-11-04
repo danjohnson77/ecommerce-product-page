@@ -9,10 +9,8 @@
 
 .main {
   position: relative;
-}
 
-.slideshow {
-  h2 {
+  h1.hidden {
     position: absolute;
     top: -9999px;
     left: -9999px;
